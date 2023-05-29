@@ -1,0 +1,32 @@
+<div id="search-bar" class="flex justify-between">
+  <div id="grid-switch" class="bg-gray-400">
+    <div class="toggle-btn active">
+      <ion-icon name="grid-outline"></ion-icon>
+    </div>
+    <div class="toggle-btn">
+      <ion-icon name="map-outline"></ion-icon>
+    </div>
+  </div>
+  <div id="search-form">
+    <div class="input-box select w-60 justify-between">
+      <p>Anywhere</p>
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+    <div class="input-box select w-36">
+      <ion-icon name="calendar-clear-outline"></ion-icon>
+      <span>May 27 - 31</span>
+    </div>
+    <div class="input-box p-2 w-40 justify-between">
+      <div class="icon-btn">
+        <ion-icon name="remove-outline"></ion-icon>
+      </div>
+      <span> 4 guests </span>
+      <div class="icon-btn">
+        <ion-icon name="add-outline"></ion-icon>
+      </div>
+    </div>
+  </div>
+  <div (click)="onFilterButtonClick()" class="filter">
+    <ion-icon name="funnel-outline"></ion-icon>
+  </div>
+</div>

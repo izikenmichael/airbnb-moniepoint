@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+select, input {
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-family: inherit;
+  padding: 0 1em 0 0;
+  font-size: inherit;
+  line-height: inherit;
+  cursor: inherit;
+  width: 100%;
+  margin: 0;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.filter-drawer {
+  > div {
+    border-bottom-width: 1px;
+    margin: 0 1.5em;
+    padding: 1.5em 0;
+  }
+
+  h1 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #111111;
+    margin-bottom: 0.25em;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #717171;
+    font-weight: 300;
+  }
+}

@@ -1,0 +1,46 @@
+<div class="backdrop">
+  <div  [ngClass]="{'opened': drawerOpen}" class="filter-drawer">
+    <div class="header">
+      <h1>Filters</h1>
+      <span>Clear All</span>
+    </div>
+    <!-- price range -->
+    <div class="price-range">
+      <h1>Price Range</h1>
+      <p>The average nightly price is $133</p>
+      <div class="form-row">
+        <div class="input-wrapper">
+          <div class="label">Min Price</div>
+          <input type="text" class="input" value="$0" />
+        </div>
+        <div class="input-wrapper">
+          <div class="label">Max Price</div>
+          <input type="text" class="input" value="$500+" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Type of place -->
+    <div class="place-type">
+      <h1>Type of place</h1>
+      <mp-place-type-item title="Entire Place" description="A place all to yourself"></mp-place-type-item>
+      <mp-place-type-item title="Private room" description="Your own room in a home or a hotel, plus some shared common spaces."></mp-place-type-item>
+      <mp-place-type-item title="Shared room" description="A sleeping space and common areas that may be shared with others."></mp-place-type-item>
+    </div>
+
+    <!-- Rooms, beds, and baths -->
+    <div class="options">
+      <h1>Rooms, beds, and baths</h1>
+      <mp-options-item title="Bedrooms"></mp-options-item>
+      <mp-options-item title="Beds"></mp-options-item>
+      <mp-options-item title="Bathrooms"></mp-options-item>
+    </div>
+
+    <div class="cta">
+      <div class="cta-btn">
+        Show 836 Homes
+      </div>
+    </div>
+  </div>
+</div>
+

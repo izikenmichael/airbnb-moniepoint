@@ -1,0 +1,46 @@
+#top-bar {
+  background-color: #ffffff;
+  border-bottom-width: 1px;
+  height: 72px;
+  padding: 1rem 2rem 0rem 2rem;
+
+  #logo {
+    width: 102px;
+    height: 32px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    height: 100%;
+    overflow: visible;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    color: #7e7e7e;
+    li {
+      height: 100%;
+      padding-top: 0.6rem;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+
+      &:hover {
+        color: #000000;
+      }
+      &.active {
+        font-weight: 500;
+        color: #000000;
+        border-bottom: rgb(255, 56, 92) 3px solid;
+      }
+    }
+  }
+
+  #avatar {
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+  }
+}

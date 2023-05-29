@@ -1,0 +1,34 @@
+.options-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  font-size: 14px;
+  padding-top: 1.2em;
+
+  h1 {
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .options-wrapper {
+    display: flex;
+    gap: 0.5em;
+
+    .pill {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 36px;
+      width: 52px;
+      border: 1px solid #11111133;
+      border-radius: 999em;
+      font-weight: 300;
+
+      &:first-child {
+        background-color: black;
+        color: white;
+        font-weight: 200;
+      }
+    }
+  }
+}

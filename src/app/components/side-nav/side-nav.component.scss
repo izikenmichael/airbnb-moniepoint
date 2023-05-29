@@ -1,0 +1,64 @@
+
+.side-nav {
+  width: 88px;
+  height: 100%;
+  border-right-width: 1px;
+  align-content: flex-start;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0.5em;
+  justify-content: flex-start;
+  padding: 1em 0;
+  transition: all 0.35s ease-in-out;
+
+  &:hover {
+    width: 228px;
+
+    .nav-item {
+      width: 100%;
+
+      .nav-label {
+        display: inline;
+        opacity: 1;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .nav-item {
+    display: flex;
+    width: 88px;
+    height: 88px;
+    align-items: center;
+    overflow: hidden;
+    gap: 12px;
+    height: 3em;
+    padding: 0.5em 2em;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    transition-delay: 0.1s;
+
+    &:hover {
+      background-color: rgb(245, 245, 245);
+    }
+
+    &.active {
+      border-right: rgb(212, 59, 81) 3px solid;
+    }
+
+    ion-icon {
+      font-size: 20px;
+      color: rgb(52, 52, 52);
+    }
+
+    .nav-label {
+      display: none;
+      opacity: 0;
+      white-space: nowrap;
+      transition: all 0.5s ease-in-out;
+      transition-delay: 0.24s;
+    }
+  }
+}

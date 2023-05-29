@@ -1,0 +1,17 @@
+.place-type-item {
+  padding-top: 1.5em;
+  .title {
+    display: flex;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 300;
+
+    .check-box {
+      width: 20px;
+      height: 20px;
+      margin-top: 1.5px;
+      border: 1px solid #11111133;
+      border-radius: 0.25em;
+    }
+  }
+}
