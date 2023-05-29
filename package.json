@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build-do": "ng build && mv dist/airbnb-moniepoint _static"
   },
   "private": true,
   "dependencies": {
