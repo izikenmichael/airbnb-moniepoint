@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'mp-home-detail-drawer',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-detail-drawer.component.scss']
 })
 export class HomeDetailDrawerComponent {
+  @Input() drawerOpen!: boolean ;
+  @Output() closeDrawer = new EventEmitter();
+
+
+  onClick() {
+    this.closeDrawer.emit();
+  }
 
 }

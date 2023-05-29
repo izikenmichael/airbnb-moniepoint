@@ -1,50 +1,69 @@
 .overlay {
- position: fixed;
- z-index: 999;
- height: 100vh;
-
- .drawer {
-  border-color: rgba(17, 17, 17, 0.1);
-  background-color: rgba($color: #000000, $alpha: 0.40);
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: nowrap;
-  gap: 16px;
-  height: 100vh;
-  width: 100vw;
-  overflow: auto;
   position: fixed;
-  top: 0;
-  right: 0;
-  transform: perspective(1200px);
-  z-index: 10;
+  z-index: 999;
+  height: 100vh;
 
-  .content {
-    max-width: 1440px;
-    width: 75%;
-    border-left-width: 1px;
-    background-color: white;
-  }
+  &.opened {
+    .drawer {
+      width: 100vw;
 
-  .close-btn {
-    margin-top: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    height: 36px;
-    width: 36px;
-    border-radius: 100%;
-    font-size: 18px;
-    cursor: pointer;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-    transition: all 0.35s ease-in-out;
-
-    &:hover {
-      color: white;
-      background-color: black;
-
+      .content {
+        max-width: 1440px;
+        width: 75%;
+      }
     }
   }
+
+  .drawer {
+    background: transparent;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    gap: 16px;
+    height: 100vh;
+    width: 0;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: perspective(1200px);
+    z-index: 10;
+    transition: all 0.35s ease-in-out;
+
+    .content {
+      max-width: 0px;
+      border-left-width: 1px;
+      background-color: white;
+      // transition: all 0.35s ease-in-out;
+    }
+
+    .close-btn {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      height: 36px;
+      width: 36px;
+      border-radius: 100%;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+      transition: all 0.35s ease-in-out;
+
+      &:hover {
+        color: white;
+        background-color: black;
+      }
+    }
   }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  z-index: 888;
 }

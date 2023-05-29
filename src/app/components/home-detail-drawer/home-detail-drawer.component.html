@@ -1,8 +1,9 @@
-<div class="overlay bg-black backdrop-blur-none">
-  <div class="drawer backdrop-opacity-10">
+<div [ngClass]="{'opened': drawerOpen}" class="overlay">
+  <div class="drawer">
     <div class="content"></div>
-    <div class="close-btn">
+    <div (click)="onClick()" class="close-btn">
       <ion-icon name="close-outline"></ion-icon>
     </div>
   </div>
 </div>
+<div *ngIf="drawerOpen" class="backdrop"></div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'mp-homestay-card',
@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./homestay-card.component.scss']
 })
 export class HomestayCardComponent {
+  @Output() openDetailsDrawer = new EventEmitter();
+
+
+  onClick() {
+    this.openDetailsDrawer.emit();
+  }
 
 }

@@ -4,9 +4,9 @@
   <div class="page-body">
     <mp-side-nav></mp-side-nav>
     <div class="homestay-grid">
-      <mp-homestay-card *ngFor="let item of [1,2,4,5,6,4,6,7,8,7,9]"></mp-homestay-card>
+      <mp-homestay-card (openDetailsDrawer)="handleOpenDetailDrawer()" *ngFor="let item of [1,2,4,5,6,4,6,7,8,7,9]"></mp-homestay-card>
     </div>
   </div>
 </div>
 <mp-filter-drawer [drawerOpen]="drawerOpen"></mp-filter-drawer>
-<mp-home-detail-drawer></mp-home-detail-drawer>
+<mp-home-detail-drawer [drawerOpen]="detailDrawerOpen" (closeDrawer)="handleCloseDetailDrawer()"></mp-home-detail-drawer>
