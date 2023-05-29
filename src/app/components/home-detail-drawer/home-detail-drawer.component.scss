@@ -5,11 +5,10 @@
 
   &.opened {
     .drawer {
-      width: 100vw;
+      right: 0;
 
-      .content {
-        max-width: 1440px;
-        width: 75%;
+      .close-btn {
+        display: flex;
       }
     }
   }
@@ -20,26 +19,26 @@
     flex-direction: row-reverse;
     flex-wrap: nowrap;
     gap: 16px;
+    width: 85%;
     height: 100vh;
-    width: 0;
     overflow: auto;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100vw;
     transform: perspective(1200px);
     z-index: 10;
-    transition: all 0.35s ease-in-out;
+    transition: all 0.8s ease-in-out;
 
     .content {
-      max-width: 0px;
+      max-width: 1440px;
+      width: 100%;
       border-left-width: 1px;
       background-color: white;
-      // transition: all 0.35s ease-in-out;
     }
 
     .close-btn {
       margin-top: 16px;
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
       background-color: white;
