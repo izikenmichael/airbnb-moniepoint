@@ -1,6 +1,14 @@
 <div [ngClass]="{'opened': drawerOpen}" class="overlay">
   <div class="drawer">
-    <div class="content"></div>
+    <div class="content">
+      <mp-photo-gallery></mp-photo-gallery>
+      <div class="details">
+        <div class="details-sections">
+
+        </div>
+        <mp-reservation-card></mp-reservation-card>
+      </div>
+    </div>
     <div (click)="onClick()" class="close-btn">
       <ion-icon name="close-outline"></ion-icon>
     </div>

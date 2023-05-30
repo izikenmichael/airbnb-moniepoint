@@ -1,0 +1,40 @@
+.photo-gallery {
+  height: 480px;
+  display: flex;
+  gap: 1em;
+  position: relative;
+
+  img.main {
+    border-radius: 1.25em;
+    width: 60%;
+    object-fit: cover;
+  }
+
+  .others {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    overflow: auto;
+
+    img {
+      max-height: calc(50% - 0.5rem);
+      width: 100%;
+      border-radius: 1.25em;
+      object-fit: cover;
+    }
+
+  }
+
+  .cta {
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    background-color: white;
+    border-radius: 12px;
+    padding: 0.5em 1em;
+    font-size: 14px;
+    font-weight: 300;
+    border-width: 1px;
+  }
+
+}

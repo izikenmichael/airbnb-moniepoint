@@ -7,7 +7,7 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   drawerOpen: boolean = false;
-  detailDrawerOpen: boolean = false;
+  detailDrawerOpen: boolean = true;
 
   constructor(private renderer: Renderer2) {}
 
@@ -23,9 +23,11 @@ export class AppComponent implements OnInit {
 
   handleOpenDetailDrawer() {
     this.detailDrawerOpen = true;
+    this.renderer.addClass(document.body, 'overflow-hidden');
   }
 
   handleCloseDetailDrawer() {
     this.detailDrawerOpen = false;
+    this.renderer.removeClass(document.body, 'overflow-hidden');
   }
 }

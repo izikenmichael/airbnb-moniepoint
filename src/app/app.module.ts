@@ -12,6 +12,8 @@ import { PlaceTypeComponent } from './components/place-type/place-type.component
 import { PlaceTypeItemComponent } from './components/place-type-item/place-type-item.component';
 import { OptionsItemComponent } from './components/options-item/options-item.component';
 import { HomeDetailDrawerComponent } from './components/home-detail-drawer/home-detail-drawer.component';
+import { PhotoGalleryComponent } from './components/photo-gallery/photo-gallery.component';
+import { ReservationCardComponent } from './components/reservation-card/reservation-card.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { HomeDetailDrawerComponent } from './components/home-detail-drawer/home-
     PlaceTypeComponent,
     PlaceTypeItemComponent,
     OptionsItemComponent,
-    HomeDetailDrawerComponent
+    HomeDetailDrawerComponent,
+    PhotoGalleryComponent,
+    ReservationCardComponent
   ],
   imports: [
     BrowserModule,

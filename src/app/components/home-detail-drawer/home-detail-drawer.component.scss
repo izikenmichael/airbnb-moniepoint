@@ -34,6 +34,31 @@
       width: 100%;
       border-left-width: 1px;
       background-color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      padding: 32px;
+      height: auto;
+      overflow: auto;
+      position: relative;
+
+      .details {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+
+        .details-sections {
+          height: 2000px;
+        }
+
+        mp-reservation-card {
+          position: sticky;
+          top: 520px;
+          z-index: 999;
+        }
+      }
     }
 
     .close-btn {
